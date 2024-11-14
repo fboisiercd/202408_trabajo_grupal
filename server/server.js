@@ -54,6 +54,11 @@ app.use(express.json());
 const port = process.env.PORT || 8000;
 
 app.use('/api/auth', routerAuth);
+app.get('/healthcheck', (req, res) => {
+    res.json({
+        estado: 'ok'
+    });
+});
 
 conectarDB();
 
