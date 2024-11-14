@@ -57,6 +57,7 @@ app.use("/api/auth", routerAuth);
 app.get("/healthcheck", (req, res) => {
   res.json({
     estado: "Todo Bien !",
+    estado_dos: "Algo distinto",
   });
 });
 
